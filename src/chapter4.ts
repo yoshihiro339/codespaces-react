@@ -1,0 +1,31 @@
+// 実行コマンド: npm run --silent start:prod
+
+/*
+  コミット時に書いておいた方がよいこと
+
+  何を変更したか（機能追加・修正・削除など）
+  なぜ変更したか（理由や背景が必要な場合）
+  影響範囲や注意点（大きな変更や互換性に関わる場合）
+  よく使われる短縮単語・Prefix例
+
+    feat: 新機能追加（feature）
+    fix: バグ修正（fix）
+    docs: ドキュメントのみの変更（documentation）
+    refactor: リファクタリング（機能変更なしの整理）
+    style: コードの見た目のみの変更（フォーマット、スペース等）
+    test: テスト追加・修正
+    chore: ビルドやツールなどの雑多な変更
+ */
+export function run() {
+  let str = 'str1';
+  switch (str) {
+    case 'str1':
+      console.log('str is str1');
+      break;
+    case 'str2':
+      console.log('str is str2');
+      break;
+    default:
+      console.log('str is other');
+  }
+}

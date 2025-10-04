@@ -17,10 +17,11 @@
     "postcss": "^8.4.31"
   },
   "scripts": {
-    "start": "BROWSER=none WDS_SOCKET_PORT=0 vite --port 3000",
+    "start": "npx tsc && node dist/index.js",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "start:prod": "npx tsc && node dist/index.js"
   },
   "eslintConfig": {
     "extends": [
@@ -42,7 +43,11 @@
   },
   "devDependencies": {
     "@types/node": "^24.6.2",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
+    "@typescript-eslint/parser": "^8.45.0",
     "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.37.0",
+    "eslint-plugin-react": "^7.37.5",
     "jsdom": "^26.1.0",
     "typescript": "^5.9.3",
     "vite": "^6.3.6",

@@ -21,7 +21,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "start:prod": "npx tsc && node dist/index.js"
+    "start:prod": "npx rimraf dist && npx tsc && node dist/index.js"
   },
   "eslintConfig": {
     "extends": [

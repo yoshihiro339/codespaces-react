@@ -21,6 +21,7 @@
     chore: ビルドやツールなどの雑多な変更
  */
 export function run() {
+  // 第2章 FizzBuzz問題
   const isMultiple5 = (num: number): boolean => num % 5 === 0;
   const isMultiple3 = (num: number): boolean => num % 3 === 0;
   const arr = [];

@@ -16,4 +16,16 @@
     test: テスト追加・修正
     chore: ビルドやツールなどの雑多な変更
  */
-export function run() {}
+export function run() {
+  let str = 'str1';
+  switch (str) {
+    case 'str1':
+      console.log('str is str1');
+      break;
+    case 'str2':
+      console.log('str is str2');
+      break;
+    default:
+      console.log('str is other');
+  }
+}

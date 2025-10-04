@@ -16,4 +16,9 @@
     test: テスト追加・修正
     chore: ビルドやツールなどの雑多な変更
  */
-export function run() {}
+export function run() {
+  // 条件演算子
+  const bool: boolean = true;
+  const num: number = bool ? 123 : 456;
+  console.log(num);
+}

@@ -1,3 +1,7 @@
+// ファイルコピーコマンド: node scripts/copy-chapter.js n
+// nはコピー元になるファイルの数字を入力してください。
+// 特に指定がない場合はデフォルトファイルをコピーします。
+
 // 実行コマンド: npm run --silent start:prod
 
 /*

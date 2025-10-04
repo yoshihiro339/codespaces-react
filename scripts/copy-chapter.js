@@ -9,21 +9,35 @@ const __dirname = path.dirname(__filename);
 const srcDir = path.join(__dirname, '../src');
 const baseFile = path.join(srcDir, 'chapter.ts');
 
-// 1. srcディレクトリ内のchapter*.tsを取得
+// コマンドライン引数取得
+const arg = process.argv[2];
+
+// chapterX.tsファイル一覧取得
 const files = fs.readdirSync(srcDir);
 const chapterFiles = files
   .map((f) => f.match(/^chapter(\d+)\.ts$/))
   .filter(Boolean)
   .map((m) => Number(m[1]));
 
-// 2. 最新番号を取得
+// コピー元ファイル決定
+let copyFrom = baseFile;
+if (arg && /^\d+$/.test(arg)) {
+  const num = Number(arg);
+  if (chapterFiles.includes(num)) {
+    copyFrom = path.join(srcDir, `chapter${num}.ts`);
+  }
+}
+
+// 新しいchapterX.tsの番号決定
 const nextNum = chapterFiles.length > 0 ? Math.max(...chapterFiles) + 1 : 1;
 const newFile = path.join(srcDir, `chapter${nextNum}.ts`);
 
-// 3. chapter.tsをコピー
-if (!fs.existsSync(baseFile)) {
-  console.error('chapter.tsが見つかりません');
+// コピー処理
+if (!fs.existsSync(copyFrom)) {
+  console.error(`${path.basename(copyFrom)}が見つかりません`);
   process.exit(1);
 }
-fs.copyFileSync(baseFile, newFile);
-console.log(`chapter${nextNum}.ts を作成しました`);
+fs.copyFileSync(copyFrom, newFile);
+console.log(
+  `${path.basename(copyFrom)} を chapter${nextNum}.ts として作成しました`
+);

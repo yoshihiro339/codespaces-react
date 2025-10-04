@@ -19,7 +19,13 @@
   ],
   "rules": {
     "semi": ["error", "always"],
-    "quotes": ["error", "single"]
+    "quotes": ["error", "single"],
+    "newline-after-var": ["error", "always"], // 変数宣言ごとに改行
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "var", "next": "*" },
+      { "blankLine": "always", "prev": "*", "next": "return" }
+    ]
     // 必要に応じて独自ルールを追加
   },
   "settings": {

@@ -41,9 +41,24 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^24.6.2",
     "@vitejs/plugin-react": "^4.7.0",
     "jsdom": "^26.1.0",
+    "typescript": "^5.9.3",
     "vite": "^6.3.6",
     "vitest": "^3.0.7"
-  }
+  },
+  "description": "Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoshihiro339/codespaces-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoshihiro339/codespaces-react/issues"
+  },
+  "homepage": "https://github.com/yoshihiro339/codespaces-react#readme"
 }
